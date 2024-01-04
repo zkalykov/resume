@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Projects</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .project-container {
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .project-box {
+      width: 250px;
+      background-color: #333;
+      border: 1px solid #555;
+      margin: 10px;
+      text-align: center;
+      border-radius: 15px; /* Rounded corners */
+      overflow: hidden; /* Hide overflowing content */
+      transition: transform 0.3s ease; /* Add smooth transition */
+
+    }
+
+    .project-box:hover {
+      transform: scale(1.1); /* Scale to 110% on hover */
+    }
+
+    .project-box img {
+      max-width: 100%;
+      height: auto;
+      border-bottom: 1px solid #555;
+      object-fit: cover;
+
+      
+    }
+
+    .project-details {
+      padding: 15px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    p {
+      margin: 10px 0 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="project-container">
+    <div class="project-box box001">
+      <img src="https://i.etsystatic.com/13623326/r/il/52b5cd/5241066150/il_570xN.5241066150_5zoy.jpg" alt="Project 1">
+      <div class="project-details">
+        <h2>Project 1</h2>
+        <p>Description of Project 1 goes here. Description of Project 1 goes here. Description of Project 1 goes here.</p>
+      </div>
+    </div>
+
+    <div class="project-box box002">
+      <img src="https://i.etsystatic.com/13623326/r/il/52b5cd/5241066150/il_570xN.5241066150_5zoy.jpg" alt="Project 2">
+      <div class="project-details">
+        <h2>Project 2</h2>
+        <p>Description of Project 2 goes here. Description of Project 2 goes here. Description of Project 2 goes here.</p>
+      </div>
+    </div>
+
+    <!-- Add more project boxes as needed -->
+
+  </div>
+</body>
+</html>

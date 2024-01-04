@@ -1,0 +1,55 @@
+<style type="text/css">
+  .word-container {
+  position: relative;
+  height: 50px; /* Adjust height as needed */
+  overflow: hidden;
+  font-size: 30px; /* Adjust font size as needed */
+}
+
+.word {
+  position: absolute;
+  top: 100%;
+}
+
+.word.visible {
+  animation: roll-up 1s ease-in-out forwards;
+}
+
+@keyframes roll-up {
+  0% { top: 100%; }
+  100% { top: 0%; }
+}
+
+.hidden {
+  display: none;
+}
+
+</style>
+<div class="word-container">
+  <span class="word">Programmer</span>
+  <span class="word hidden">Full Stack</span>
+  <span class="word hidden">IT Manager</span>
+  <span class="word hidden">Designer</span>
+</div>
+<script type="text/javascript">
+  
+  const words = ["Programmer", "Full Stack", "IT Manager", "Designer"];
+let currentWordIndex = 0;
+
+function showNextWord() {
+  const wordContainer = document.querySelector(".word-container");
+  const currentWord = wordContainer.querySelectorAll(".word")[currentWordIndex];
+  const nextWord = wordContainer.querySelectorAll(".word")[currentWordIndex + 1];
+
+  currentWord.classList.remove("visible");
+  nextWord.classList.add("visible");
+  nextWord.style.display = "block";
+
+  currentWordIndex = (currentWordIndex + 1) % words.length;
+
+  setTimeout(showNextWord, 1000); // Change word every second
+}
+
+showNextWord(); // Start the animation
+
+</script>
