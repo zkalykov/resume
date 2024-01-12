@@ -1,5 +1,5 @@
 const changeableText = document.querySelector('.changeable-text');
-const words = ['IT manager', 'Software engineer', 'Full-Stacker', 'designer'];
+const words = ['Full-Stack Web Developer', 'Data Analyst', 'Graphic Designer','Software Engineer'];
 let currentWord = 0;
 const changeWord = () => {
     currentWord++;
@@ -14,6 +14,18 @@ setInterval(changeWord, 2000);
 
 // THIS IS FOR EARTH
 
+
+// For radius of earth
+
+// Get the width of the viewport
+    function getWindowWidth() {
+      return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    }
+
+var radius_rd=32;
+ if (getWindowWidth() < 600) {
+        radius_rd = 2; // Change the integer for mobile size
+ }
 // Set up scene
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -24,7 +36,7 @@ setInterval(changeWord, 2000);
 
     // Create a sphere (globe)
     const earthRadius = 3; // Set the initial Earth radius
-    const geometry = new THREE.SphereGeometry(earthRadius, 32, 32);
+    const geometry = new THREE.SphereGeometry(earthRadius, radius_rd, radius_rd);
     const textureLoader = new THREE.TextureLoader();
     const texture = textureLoader.load('earth-dark.jpg');
     const material = new THREE.MeshStandardMaterial({ map: texture, color: 0x915eff, transparent: true }); // Set the color to "#915eff" and make material transparent
@@ -182,3 +194,21 @@ const container_circle = document.getElementById('container_circle');
 
     // Start the animation loop
     updateCircles();
+
+
+
+
+// FOr Navbar responsive
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.querySelector('.toggle-btn');
+    const navbarLinks = document.querySelector('.navbar-links');
+
+    toggleButton.addEventListener('click', function () {
+        navbarLinks.classList.toggle('collapsed');
+    });
+});
+
+
+

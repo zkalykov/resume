@@ -69,6 +69,11 @@ body {
   border-radius: 25%;
 
 }
+.abc2{
+  z-index: 2;
+  position: absolute; 
+  font-size: 50px;
+}
 .first .earth-container {
     position: absolute;
     transform: translateY(-20%);
@@ -99,6 +104,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
 }
 
 
@@ -126,6 +132,7 @@ body {
 }
 .fourth h1{
     color: white;
+    padding-left: 20%;
     padding-top: 10%;
 
      padding-left: 25vh;
@@ -145,7 +152,7 @@ body {
 
     .project-box {
       width: 250px;
-      background-color: #333;
+      background: #333;
       border: 1px solid #555;
       margin: 10px;
       text-align: center;
@@ -153,9 +160,14 @@ body {
       overflow: hidden; /* Hide overflowing content */
       transition: transform 0.3s ease; /* Add smooth transition */
 
+    }
+    .project-box h2,p{
+        background: linear-gradient(to right, #0072ff, #00ffcc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
 
     }
-
     .project-box:hover {
       transform: scale(1.1); /* Scale to 110% on hover */
     }
@@ -179,11 +191,74 @@ body {
     display: flex;
 
     height: 100vh;
+
+    align-items: center;
+    justify-content: center;
 }
-.fifth h1{
-  color: white;
-    padding-left: 20%;
-    padding-top: 10%;
+
+.fifth h1 {
+  font-size: 2em;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  color: transparent;
+  background: linear-gradient(to right, #6868ff, #ff68a5);
+  -webkit-background-clip: text;
+  display: inline;
+  background-size: 200% 100%;
+  animation: textAnimation1 5s infinite linear;
+  transition: color 0.3s ease; /* Add a color transition */
+}
+
+@keyframes textAnimation1 {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.fifth h1:hover {
+  color: #6868ff; /* Change the color on hover */
 }
 
 
+
+
+/* HERE CONTACT BUTTON */
+/* Futuristic Button Styles */
+.contact_button {
+    font-weight: bold;
+    font-size: 18px;
+    color: white; /* Blue color */
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient from blue to green */
+    border: none;
+    padding: 12px 24px; /* Adjust padding as needed */
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact_button:hover {
+    background: linear-gradient(to right, #2ecc71, #3498db);
+    transform: scale(1.05); /* Increase size on hover for a subtle effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+
+
+
+
+/*  GOES SIXTH CONTENT */
+
+.sixth {
+    background: dark;
+    color: black;
+    display: flex;
+    height: 100vh;
+
+
+    align-items: center;
+    justify-content: center;
+}

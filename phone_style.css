@@ -1,0 +1,86 @@
+@media only screen and (max-width: 600px) {
+
+
+
+
+.navbar {
+    width: 100%;
+    padding-top: 10px;
+    height: 50px; /* Adjusted height */
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8); /* Dark and transparent background */
+}
+
+.first .earth-container {
+    position: absolute;
+    transform: translateY(-20%);
+    padding-top: 100vh;
+}
+
+.abc2{
+  position: absolute; 
+  font-size: 50px;
+  max-width: 100%;
+}
+
+.first {
+    background: black;
+  /*
+    background-image: url("https://isotropic.co/wp-content/uploads/2022/07/layers-loop.h264.2020-12-21-11_16_56.gif");
+    background-size: cover;
+*/
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.first .myphoto {
+    position: absolute; /* Use absolute positioning for the image */
+    left: 10%; /* Adjust the left position as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+
+}
+.first .myphoto img{
+  display: none;
+
+}
+
+
+.third {
+    background: dark;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+#container_circle {
+      position: relative;
+      width: 70%;
+      height: 80vh;
+      align-items: center;
+      text-align: center;
+    }
+
+    .circle {
+       position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+
+
+
+
+
+
+}
